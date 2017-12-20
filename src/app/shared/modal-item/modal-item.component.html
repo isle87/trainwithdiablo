@@ -1,0 +1,26 @@
+<div #card id="card" [hidden]="hidden" *ngIf="type">
+    <div *ngIf="item && !item.set" class="head">
+      {{item.name}}
+      <div>
+        <img [src]="img" />
+      </div>
+      <div class="affix">
+        {{item.attributes?.passive[0]?.text}}
+      </div>
+    </div>
+
+    <div *ngIf="item && item.set" class="green">
+        {{item.name}}
+        <div>
+          <img [src]="img" />
+        </div>
+        <ul>
+          <li *ngFor="let i of item.set.ranks">
+            <div class="affix">
+                <b>{{i.required}}. </b> {{i.attributes.passive[0].text}}
+            </div>
+          </li>
+        </ul>
+      </div>
+
+</div>

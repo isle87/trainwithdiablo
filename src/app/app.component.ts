@@ -7,4 +7,32 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'twd';
+  links = [
+    {
+      link: 'news',
+      name: 'News',
+    },
+    {
+      link: 'news',
+      name: 'Klassenguides',
+    },
+    {
+      link: 'news',
+      name: 'Guides',
+    },
+    {
+      link: 'news',
+      name: 'Grundlagen',
+    },
+    {
+      link: 'news',
+      name: 'Datenbank',
+    },
+  ];
+
+  public collapse = false;
+
+  constructor() {
+
+  }
 }

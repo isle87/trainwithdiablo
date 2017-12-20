@@ -1,0 +1,72 @@
+@import "../../../styles.scss";
+
+
+h2 {
+  color:white;
+}
+
+
+.img{
+  height: $blog-img-size;
+  width: $blog-img-size;
+  // background-image: url('https://www.golem.de/1712/sp_131733-150578-i_rc.jpg');
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  background-color: $color1;
+}
+
+.content {
+  height: calc(#{$blog-img-size});
+  width: calc(100% - #{$blog-img-size} - 30px);
+  //margin: 4px 0 0 12px;
+  padding: 4px 0 0 12px;
+  h4{
+    margin: 0px;
+    font-size: 1em;
+    font-weight: 200;
+    color: $color4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $color2;
+  }
+  h2 {
+    margin: 0px;
+    font-size: 1.4em;
+    font-weight: 200;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  div {
+    height: calc(#{$blog-img-size} - 60px);
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.container {
+  cursor: pointer;
+  margin: 10px;
+  background-color: $color4;
+  height: $blog-img-size;
+  width: $max-width;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  :hover {
+    background-color: $color1;
+  }
+}
+@media screen and (max-width: $max-width){
+  .container {
+    width: 90vw;
+  }
+}

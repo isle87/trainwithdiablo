@@ -1,0 +1,16 @@
+<twd-modal-item #leg></twd-modal-item>
+<twd-modal-item #set></twd-modal-item>
+<div class="container">
+
+    <div class="img" #img></div>
+    <div class="author">
+        <p>{{(post$ | async)?.Author}} am {{(post$ | async)?.PubDate | date:'mediumDate'}}</p>
+        <p id="topic">{{(post$ | async)?.Topic}}</p>
+        <p id="topic">3 <i class="material-icons">comment</i></p>
+    </div>
+
+    <h1>{{(post$ | async)?.Title}}</h1>
+
+    <div #content id="content" [innerHTML]="(post$ | async)?.Text | sanitizeHtml">
+    </div>
+</div>

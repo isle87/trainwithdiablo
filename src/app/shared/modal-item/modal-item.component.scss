@@ -1,0 +1,41 @@
+@import "../../../styles.scss";
+
+#card {
+  position: absolute;
+  box-shadow: 5px 5px 3px rgba(0,0,0,.1);
+  width: 250px;
+  z-index: 30;
+  background-color: $color-background-modal;
+}
+
+.head,.green {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: calc(100% -8px);
+  text-align: center;
+  font-size: 1em;
+  padding: 4px;
+}
+
+.head {
+  background-color: darken($color3, 24%);
+  border: 2px solid $color-leg;
+  color: $color-leg;
+}
+.green {
+  color: lighten($color-set, 5%);
+  background-color: darken($color-set, 30%);
+  border: 2px solid $color-set;
+}
+
+ul {
+  padding-left: 0px;
+  li {
+    padding-top: 5px;
+  }
+}
+.affix {
+  font-size: .9em;
+  text-align: left;
+}

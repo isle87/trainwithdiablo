@@ -1,0 +1,70 @@
+  @import "../styles.scss";
+.indexer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.space{
+  height: 80px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: $nav-background-color;
+
+}
+
+li.nav-items {
+  float: left;
+  a {
+    display: block;
+    color: $nav-color;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: $color1;
+  }
+}
+
+li {
+  float: left;
+  .logo {
+    color: $nav-title-color;
+    padding: 14px 16px;
+    font-weight: 600;
+  }
+  li#bar {
+    display: none;
+  }
+}
+
+@media screen and(max-width: $break-medium) {
+  li.collapse {
+    display: none;
+  }
+  li.nav-items, li#logo {
+    float: none;
+    z-index: 10;
+  }
+  li#bar {
+    float: right;
+    padding: 8px;
+    &:hover {
+      background-color: $color1;
+    }
+    .icon-bar {
+      width: 35px;
+      height: 2px;
+      background-color: white;
+      margin: 6px 30px;
+    }
+  }
+}

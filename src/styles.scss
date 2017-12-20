@@ -1,1 +1,81 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+// -- colors -------------------------------------------------------------------
+$color1: rgba(30, 55, 80, 1);
+$color2: rgba(77, 122, 163, 1);
+$color3: rgba(157, 1, 2, 1);
+$color4: rgba(10, 9, 8, 1);
+$color5: rgba(164, 122, 48, 1);
+
+$font-color: darken(white, 30%);
+$color-leg : #BF642F;
+$color-set: #8BD442;
+$color-background-modal: #252017;
+
+// -- Global variables ---------------------------------------------------------
+$max-width: 800px;
+$font-family: "Roboto";
+$break-medium: 650px;
+$break-small: 450px;
+
+
+//blog
+$blog-img-size: 120px;
+
+// nav
+$nav-title-color: $color5;
+$nav-background-color: $color1;
+$nav-color: white;
+$nav-font-family: $font-family;
+
+// -- mixins
+
+@mixin background-gradient($img, $darken: 0.1) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, $darken), rgba(0, 0, 0, $darken)), url("$img");
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, $darken), rgba(0, 0, 0, $darken)), url("$img");
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, $darken), rgba(0, 0, 0, $darken)), url("$img");
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, $darken), rgba(0, 0, 0, $darken)), url("$img");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, $darken)), to(rgba(0, 0, 0, $darken))), url("$img");
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, $darken), rgba(0, 0, 0, $darken)), url("$img");
+}
+
+
+// -- Global styles -------------------------------------------------------------
+//body {@include background-gradient(, 0.1)}
+body {
+
+  height: 100vh;
+  margin: 0px;
+  font-family: $font-family;
+  background-color: $color4;
+  color: $font-color;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url('/assets/images/background.jpg');
+  //background-image: url();
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.leg {
+  text-decoration: none;
+  color: $color-leg;
+}
+
+.set {
+  text-decoration: none;
+  color: $color-set;
+}
+
+.highlight {
+  color: $color5;
+}
+
+
+
+
+

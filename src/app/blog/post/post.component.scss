@@ -1,0 +1,64 @@
+@import "../../../styles.scss";
+$container-padding: 10px;
+.container {
+  max-width: $max-width;
+  width: 90vw;
+  margin: 0 auto;
+  padding: $container-padding;
+}
+
+.container {
+  background-color: $color4;
+}
+
+.img {
+  width: calc(100% + 2 * #{$container-padding});
+  height: 30vh;
+  margin: -#{$container-padding} -#{$container-padding} 0 -#{$container-padding};
+  background-color: pink;
+  max-height: 300px;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; //background-attachment: fixed;
+}
+
+i {
+  font-size: 1.1em;
+}
+
+h2, h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.author {
+  color: $color2;
+  font-size: 1em;
+  padding: 0 10px 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+:host /deep/ #content {
+  iframe {
+    margin: 0 -#{$container-padding} 0 -#{$container-padding};
+  }
+
+  #ytplayer {
+    position: relative;
+    width: calc(100% + 2 * #{$container-padding});
+    height: 450px;
+    background-color: $color3;
+    @media screen and (max-width: 880px) {
+      height: calc((100vw -10px) *.51);
+    }
+  }
+
+
+  padding-bottom: 100px;
+}
