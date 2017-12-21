@@ -29,6 +29,9 @@ export class AppComponent {
       name: 'Datenbank',
     },
   ];
+  dataProtection = 'datenschutz';
+  impressum = 'impressum';
+  login = 'login';
 
   public collapse = false;
 

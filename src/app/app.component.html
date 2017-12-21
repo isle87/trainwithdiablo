@@ -16,10 +16,19 @@
       </ul>
 </div>
 <div class="space"></div>
+<twd-user-bar></twd-user-bar>
 <router-outlet></router-outlet>
 
 <footer>
+    <p>
     © 2003-2017 - 4Fansites, Weiterverwendung von Inhalten oder Grafiken nur mit Erlaubnis.
-
     Diablo 3 and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment in the U.S. and/or other countries.
+  </p>
+  <p>
+    <a [routerLink]="dataProtection">Datenschutz</a>
+    <a [routerLink]="impressum">Impressum</a>
+  </p>
+  <p>
+    <a [routerLink]="login">Login</a>
+  </p>
 </footer>

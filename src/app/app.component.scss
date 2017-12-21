@@ -88,3 +88,15 @@ li.active {
     }
   }
 }
+
+footer {
+  text-align: center;
+  font-size: .8em;
+  a {
+    text-decoration: unset;
+    color:white;
+    &:hover {
+      color: $color2;
+    }
+  }
+}
