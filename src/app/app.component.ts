@@ -6,26 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'twd';
+  title = '4fansites';
   links = [
     {
       link: 'news',
       name: 'News',
     },
     {
-      link: 'news',
+      link: 'x',
       name: 'Klassenguides',
     },
     {
-      link: 'news',
+      link: 'x',
       name: 'Guides',
     },
     {
-      link: 'news',
+      link: 'x',
       name: 'Grundlagen',
     },
     {
-      link: 'news',
+      link: 'x',
       name: 'Datenbank',
     },
   ];

@@ -10,7 +10,7 @@
         <li id="logo">
           <div class="logo">{{title}}</div>
         </li>
-        <li *ngFor="let l of links" class="nav-items" [ngClass]="{'collapse': !collapse}">
+        <li *ngFor="let l of links" class="nav-items" [ngClass]="{'collapse': !collapse}" routerLinkActive="active">
           <a [routerLink]="l.link">{{l.name}}</a>
         </li>
       </ul>

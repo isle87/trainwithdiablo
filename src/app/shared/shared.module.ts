@@ -6,6 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModalItemComponent } from './modal-item/modal-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { WriteCommentComponent } from './write-comment/write-comment.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   imports: [
@@ -13,12 +15,21 @@ import { BrowserModule } from '@angular/platform-browser';
     FormsModule,
     HttpClientModule
   ],
-  declarations: [SanitizeHtmlPipe, ModalItemComponent],
+  declarations: [
+    SanitizeHtmlPipe,
+    ModalItemComponent,
+    WriteCommentComponent,
+    CommentsComponent,
+  ],
   exports: [
     SanitizeHtmlPipe,
     ModalItemComponent,
     FormsModule,
     HttpClientModule,
+    WriteCommentComponent,
+    CommentsComponent,
+  ],
+  providers: [
   ]
 })
 export class SharedModule { }

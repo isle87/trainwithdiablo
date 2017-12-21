@@ -5,12 +5,25 @@
     <div class="img" #img></div>
     <div class="author">
         <p>{{(post$ | async)?.Author}} am {{(post$ | async)?.PubDate | date:'mediumDate'}}</p>
-        <p id="topic">{{(post$ | async)?.Topic}}</p>
-        <p id="topic">3 <i class="material-icons">comment</i></p>
+
+        <p id="topic">3 <i class="fas fa-comment"></i></p>
     </div>
 
     <h1>{{(post$ | async)?.Title}}</h1>
+    <div class="topic" >
+      <p >{{(post$ | async)?.Topic}}</p>
+    </div>
 
     <div #content id="content" [innerHTML]="(post$ | async)?.Text | sanitizeHtml">
     </div>
+
+    <div class="social">
+        <div id="twitter"><a class="twitter-share-button" [href]="tweet"><i class="fab fa-twitter"></i> Tweet</a></div>
+        <div id="follow"><a class="facebook-share-button" href="facebook.com"><i class="fab fa-facebook-square"></i> Folgen</a></div>
+        <div id="follow"><a class="facebook-share-button" href="facebook.com"><i class="fas fa-thumbs-up"></i> Like</a></div>
+        <div id="follow"><a class="youtube-share-button" href="youtube.com"><i class="fab fa-youtube"></i> Abbonieren</a></div>
+
+    </div>
+    <twd-write-comment [postId]="this.id" (onComment)="onComment($event)"></twd-write-comment>
+    <twd-comments [comments]="comments"></twd-comments>
 </div>

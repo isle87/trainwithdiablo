@@ -5,6 +5,15 @@
   left: 0;
   width: 100%;
   z-index: 10;
+  @media screen and (min-width: $break-medium) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $nav-background-color;
+      @media screen and(max-width: $break-medium) {
+        flex-direction: row;
+      }
+  }
 }
 
 .space{
@@ -29,9 +38,9 @@ li.nav-items {
     padding: 14px 16px;
     text-decoration: none;
   }
-  a:hover {
-    background-color: $color1;
-  }
+/*   a:hover {
+    background-color: $color2;
+  } */
 }
 
 li {
@@ -44,6 +53,17 @@ li {
   li#bar {
     display: none;
   }
+}
+
+li:hover {
+  background-color: $nav-color-hover;
+  &.active {
+    background-color: $nav-color-active;
+  }
+}
+
+li.active {
+  background-color: $nav-color-active;
 }
 
 @media screen and(max-width: $break-medium) {

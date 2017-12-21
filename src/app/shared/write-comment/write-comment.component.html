@@ -1,0 +1,8 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="Text">Kommentar</label>
+    <textarea [(ngModel)]="comment.Text" name="text" id="Text" rows="4" cols="50" required>
+    </textarea>
+  </div>
+  <button type="submit" class="btn btn-success" [disabled]="!form.form.valid">Senden</button>
+</form>

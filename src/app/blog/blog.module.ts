@@ -8,7 +8,6 @@ import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
 import { BlogService } from './blog.service';
 import { PostComponent } from './post/post.component';
 import { SharedModule } from '../shared/shared.module';
-import { ConfigService } from '../config.service';
 
 @NgModule({
   imports: [

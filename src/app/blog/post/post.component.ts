@@ -6,11 +6,12 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/switchMap';
 
 import { BlogService } from '../blog.service';
-import { ConfigService } from '../../config.service';
 import { ViewChildren } from '@angular/core/src/metadata/di';
 import { QueryList } from '@angular/core/src/linker/query_list';
 import { ModalItemComponent } from '../../shared/modal-item/modal-item.component';
 import { BlogPost } from '../../models/blog-post';
+import { Comment } from '../../models/comment';
+import { ConfigService } from '../../core/config.service';
 
 
 @Component({
@@ -21,7 +22,7 @@ import { BlogPost } from '../../models/blog-post';
 export class PostComponent implements OnInit, AfterViewInit {
   public post$ = new Observable<BlogPost>();
   public elems: any; // HTMLCollectionOf<Element>;
-
+  public tweet = 'https://twitter.com/intent/tweet?text=';
   @ViewChild('img') img: ElementRef;
   @ViewChild('set') set: ModalItemComponent;
   @ViewChild('leg') leg: ModalItemComponent;
@@ -31,15 +32,20 @@ export class PostComponent implements OnInit, AfterViewInit {
     private config: ConfigService,
     public dom: DomSanitizer,
     private blogService: BlogService) { }
+    public id;
+    public comments: Comment[];
 
   ngOnInit() {
     this.post$ = this.route.paramMap
       .switchMap((params: ParamMap) => {
-        return this.blogService.getBlogPost(Number(params.get('id')));
+        this.id = Number(params.get('id'));
+        this.getComments();
+        return this.blogService.getBlogPost(this.id);
       });
 
     this.post$.subscribe(res => {
       this.img.nativeElement.style.backgroundImage = `url(${res.PreviewImage})`;
+      this.tweet += res.PreviewText.replace(/ /g, '%20');
     });
   }
 
@@ -59,7 +65,18 @@ export class PostComponent implements OnInit, AfterViewInit {
         legs[i].onmouseleave = (event) => this.leg.mouseLeave(event);
       }
     }, 100);
+  }
 
+  getComments() {
+    this.blogService.getComments(this.id).subscribe(res => {
+      this.comments = res;
+    });
+  }
+
+  onComment(comment: Comment) {
+    this.blogService.sendComment(comment).subscribe(() => {
+      this.getComments();
+    });
   }
 
 }

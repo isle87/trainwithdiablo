@@ -27,6 +27,8 @@ $nav-title-color: $color5;
 $nav-background-color: $color1;
 $nav-color: white;
 $nav-font-family: $font-family;
+$nav-color-active: darken($color1, 10%); // black;
+$nav-color-hover: lighten($color1, 10%);
 
 // -- mixins
 

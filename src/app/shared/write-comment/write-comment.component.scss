@@ -1,0 +1,28 @@
+@import "../../../styles.scss";
+form,
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: $color2;
+  border: none;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  margin: 5px;
+  &:disabled {
+    background-color: darkgray;
+  }
+}
+
+textarea {
+  border-radius: 5px;
+  font-family: $font-family;
+
+}

@@ -32,16 +32,59 @@ i {
 
 h2, h1 {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
-.author {
+.author, .topic {
   color: $color2;
   font-size: 1em;
   padding: 0 10px 0 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.topic {
+  justify-content: center;
+}
+
+.social {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media screen and (max-width: $break-medium) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.twitter-share-button, .facebook-share-button, .youtube-share-button {
+  display: inline-block;
+  padding: 4px 15px;
+  margin: 10px;
+  text-decoration: none;
+  background-color: #1a8bf0;
+  color: white;
+  border-radius: 5px;
+  &:hover {
+    background-color: darken(#1a8bf0,10%);
+  }
+}
+
+.facebook-share-button {
+  background-color: #4e69a2;
+  &:hover {
+    background-color: darken(#4e69a2,10%);
+  }
+}
+
+.youtube-share-button {
+  background-color: red;
+  &:hover {
+    background-color: darken(red,10%);
+  }
 }
 
 :host /deep/ #content {
@@ -53,12 +96,11 @@ h2, h1 {
     position: relative;
     width: calc(100% + 2 * #{$container-padding});
     height: 450px;
-    background-color: $color3;
+    background-color: $color4;
     @media screen and (max-width: 880px) {
       height: calc((100vw -10px) *.51);
     }
   }
-
 
   padding-bottom: 100px;
 }

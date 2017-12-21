@@ -1,0 +1,8 @@
+<div class="comments" *ngFor="let comment of comments">
+  <div class="user">
+    {{comment.UserName}} am {{comment.PubDate | date:'mediumDate'}}
+  </div>
+  <div class="text">
+    {{comment.Text}}
+  </div>
+</div>

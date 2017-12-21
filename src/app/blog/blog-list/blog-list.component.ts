@@ -3,6 +3,7 @@ import { BlogService } from '../blog.service';
 import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
 import { BlogPost } from '../../models/blog-post';
+import { AuthService } from '../../core/auth.service';
 
 @Component({
   selector: 'twd-blog-list',
@@ -12,7 +13,7 @@ import { BlogPost } from '../../models/blog-post';
 export class BlogListComponent implements OnInit {
   public blogList: BlogPost[];
 
-  constructor(private blogService: BlogService) { }
+  constructor(private blogService: BlogService, private auth: AuthService) { }
 
   ngOnInit() {
     this.init();

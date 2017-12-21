@@ -1,10 +1,10 @@
 // tslint:disable:no-inferrable-types
 import { Component, OnInit, Input, ElementRef, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 import { Renderer2 } from '@angular/core';
-import { ItemService } from '../../item.service';
-import { ConfigService } from '../../config.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { ItemService } from '../../core/item.service';
+import { ConfigService } from '../../core/config.service';
 
 declare var jQuery: any;
 

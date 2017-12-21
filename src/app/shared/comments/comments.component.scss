@@ -1,0 +1,23 @@
+@import "../../../styles.scss";
+
+.comments {
+  display: block;
+  align-items: center;
+  margin: 10px auto;
+  width: 80%;
+  @media screen and (max-width: $break-medium) {
+    width: 100%;
+  }
+}
+
+.user {
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
+  background-color: $color2;
+}
+
+.text {
+  padding: 5px;
+  border-radius: 0 0 5px 5px;
+  background-color: darken( $color2, 20%);
+}
