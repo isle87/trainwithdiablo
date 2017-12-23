@@ -1,4 +1,15 @@
-import { Component, OnInit, ViewChild, ElementRef, SecurityContext, HostListener, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  SecurityContext,
+  HostListener,
+  AfterViewInit,
+  Input,
+  Renderer2,
+  SimpleChanges
+} from '@angular/core';
 import { Router, ParamMap, ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -12,6 +23,11 @@ import { ModalItemComponent } from '../../shared/modal-item/modal-item.component
 import { BlogPost } from '../../models/blog-post';
 import { Comment } from '../../models/comment';
 import { ConfigService } from '../../core/config.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DeleteDialogComponent } from '../../shared/delete-dialog/delete-dialog.component';
+import { Observer } from 'rxjs/Observer';
+import { AuthService, PermissionValue } from '../../core/auth.service';
+import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 
 
 @Component({
@@ -19,37 +35,85 @@ import { ConfigService } from '../../core/config.service';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
-export class PostComponent implements OnInit, AfterViewInit {
-  public post$ = new Observable<BlogPost>();
+export class PostComponent implements OnInit, AfterViewInit, OnChanges {
+
+  /** For preview */
+  @Input() postPreview: BlogPost;
+
+  // login stuff
+  public logDelete: PermissionValue = new PermissionValue('blog-post-delete', false);
+  public logEdit: PermissionValue = new PermissionValue('blog-post-edit', false);
+
+  public post: BlogPost;
   public elems: any; // HTMLCollectionOf<Element>;
   public tweet = 'https://twitter.com/intent/tweet?text=';
+
   @ViewChild('img') img: ElementRef;
   @ViewChild('set') set: ModalItemComponent;
   @ViewChild('leg') leg: ModalItemComponent;
 
   constructor(private router: Router,
+    private auth: AuthService,
     private route: ActivatedRoute,
     private config: ConfigService,
+    private renderer: Renderer2,
     public dom: DomSanitizer,
+    private dialog: MatDialog,
     private blogService: BlogService) { }
-    public id;
-    public comments: Comment[];
+  public id;
+  public comments: Comment[];
 
   ngOnInit() {
-    this.post$ = this.route.paramMap
-      .switchMap((params: ParamMap) => {
-        this.id = Number(params.get('id'));
-        this.getComments();
-        return this.blogService.getBlogPost(this.id);
-      });
-
-    this.post$.subscribe(res => {
-      this.img.nativeElement.style.backgroundImage = `url(${res.PreviewImage})`;
-      this.tweet += res.PreviewText.replace(/ /g, '%20');
+    this.decideReadOrPreview();
+    this.auth.changeLogged$.subscribe(res => {
+      if (res) {
+        this.auth.hasPermission(this.logDelete);
+        this.auth.hasPermission(this.logEdit);
+      }
     });
   }
 
   ngAfterViewInit() {
+    this.setUpHoverItemModal();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('onchanges', changes);
+  }
+
+  /**
+   * Decide if this component is used as preview or as public post.
+   * The key is the @Input() post.
+   */
+  private decideReadOrPreview() {
+    console.log('post', this.postPreview);
+    if (!this.postPreview) { // read
+      this.getPostfromServer();
+    } else { // preview
+      this.logDelete.permission = false; // no delete needed in preview mode
+      this.logEdit.permission = false; // edit as well
+      this.post = this.postPreview;
+    }
+    this.setupImage();
+  }
+
+  private getPostfromServer() {
+    this.route.paramMap
+      .switchMap((params: ParamMap) => {
+        this.id = Number(params.get('id'));
+        this.getComments();
+        return this.blogService.getBlogPost(this.id);
+      }).subscribe(res => {
+        this.post = res;
+      });
+  }
+
+  private setupImage() {
+    this.img.nativeElement.style.backgroundImage = `url(${this.post.PreviewImage})`;
+    this.tweet += this.post.PreviewText.replace(/ /g, '%20');
+  }
+
+  private setUpHoverItemModal() {
     setTimeout(() => {
       this.set.type = 'Set';
       this.leg.type = 'Legendary';
@@ -67,16 +131,33 @@ export class PostComponent implements OnInit, AfterViewInit {
     }, 100);
   }
 
-  getComments() {
+  private getComments() {
     this.blogService.getComments(this.id).subscribe(res => {
       this.comments = res;
     });
   }
 
-  onComment(comment: Comment) {
+  public onComment(comment: Comment) {
     this.blogService.sendComment(comment).subscribe(() => {
       this.getComments();
     });
   }
 
+  public delete() {
+    this.openDialog().subscribe(res => {
+      if (!res)
+        return;
+      this.blogService.deletePost(this.post.id)
+        .subscribe((resp) => {
+          if (resp) this.router.navigate(['/news']);
+        });
+    });
+  }
+
+  private openDialog() {
+    const dia = this.dialog.open(DeleteDialogComponent, {
+      width: '200px;',
+    });
+    return <Observable<boolean>>dia.afterClosed();
+  }
 }

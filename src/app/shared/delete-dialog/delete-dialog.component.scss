@@ -1,0 +1,7 @@
+@import "../../../../node_modules/bootstrap/dist/css/bootstrap.css";
+
+mat-dialog-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

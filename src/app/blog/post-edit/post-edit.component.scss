@@ -1,0 +1,17 @@
+@import "../../../styles.scss";
+@import "../../../../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../../../../node_modules/quill/dist/quill.snow.css";
+
+$container-padding: 10px;
+.twd-container {
+  max-width: $max-width;
+  width: 90vw;
+  margin: 0 auto;
+  padding: $container-padding;
+}
+
+.twd-container {
+  background-color: $color4;
+}
+
+

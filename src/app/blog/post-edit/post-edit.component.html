@@ -1,0 +1,31 @@
+<div class="twd-container">
+  <form #form="ngForm">
+    <div class="form-group">
+      <label for="image">PreviewImage</label>
+      <input type="url" name="image" class="form-control" [(ngModel)]="post.PreviewImage" required>
+    </div>
+    <div class="form-group">
+      <label for="title">Titel</label>
+      <input type="text" name="title" class="form-control" [(ngModel)]="post.Title" required>
+    </div>
+    <div class="form-group">
+      <label for="topic">Topic</label>
+      <input type="text" name="topic" class="form-control" [(ngModel)]="post.Topic" required>
+    </div>
+    <div class="form-group">
+      <label for="preview">PreviewText</label>
+      <textarea rows="4" type="text" name="preview" [(ngModel)]="post.PreviewText" class="form-control preview" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="text">Text</label>
+      <!-- <textarea rows="25" type="text" name="text" [(ngModel)]="post.Text" class="form-control" required></textarea> -->
+
+      <quill-editor [(ngModel)]="post.Text" name="text"></quill-editor>
+
+    </div>
+    <button type="button" class="btn btn-success" [disabled]="!form.form.valid" (click)="save()">Speichern</button>
+  </form>
+</div>
+<hr>
+<h1>Vorschau</h1>
+<twd-post [postPreview]="post"></twd-post>

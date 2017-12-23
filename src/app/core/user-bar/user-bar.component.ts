@@ -8,22 +8,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-bar.component.scss']
 })
 export class UserBarComponent implements OnInit {
-  public logedIn = false;
+  public loggedIn = false;
+  public name;
 
   constructor(private auth: AuthService, private router: Router) {
    }
 
   ngOnInit() {
-    this.getData();
-    this.auth.hasLoggedIn.subscribe(() => this.getData());
+    // this.getData();
+    console.log(this.loggedIn);
+    this.auth.changeLogged$.subscribe((res) => {
+      console.log('logout');
+        this.loggedIn = res;
+        if (res) {
+          this.name = this.auth.getUsername();
+        }
+    });
   }
 
-  private getData() {
-    if (!this.auth.isLogedin) {
-      this.logedIn = false;
-      return;
-    }
-    this.logedIn = true;
+  public logout() {
+    this.auth.logOut();
   }
 
 }

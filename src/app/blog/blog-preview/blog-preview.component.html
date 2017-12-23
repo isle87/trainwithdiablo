@@ -1,9 +1,13 @@
 <div class="container" [@hover]="state" (mouseenter)="changeState()" (mouseleave)="changeState()">
-  <div class="img" #img></div>
-  <div class="content">
+  <div class="img" #img [routerLink]="['/news',post.id]"></div>
+  <div class="content" [routerLink]="['/news',post.id]">
     <h4>{{post.Topic}}</h4>
     <h2>{{post.Title}}</h2>
     <div>{{post.PreviewText}}</div>
+  </div>
+  <div id="work-box">
+    <div *ngIf="logEdit.permission" id="edit" [routerLink]="['/news/edit', post.id]"><i class="fas fa-edit"></i></div>
+    <div *ngIf="logDelete.permission" id="delete" (click)="delete()"><i class="fas fa-trash"></i></div>
   </div>
 </div>
 

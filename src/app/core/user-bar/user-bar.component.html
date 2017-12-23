@@ -1,3 +1,6 @@
-<section *ngIf="logedIn">
-  <p>Logged in</p>
-</section>
+<div id="bar-back" *ngIf="loggedIn">
+  <div id="bar">
+    <p> <i class="fa fa-user" aria-hidden="true"></i> {{name}}</p>
+    <p id="logout"  (click)="logout()">Logout <i class="fas fa-sign-out-alt"></i></p>
+  </div>
+</div>

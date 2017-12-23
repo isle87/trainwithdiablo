@@ -12,6 +12,11 @@
         <label for="password">Passwort</label>
         <input type="password" required class="form-control" placeholder="Passwort" [(ngModel)]="password" name="passwort">
       </div>
+      <div class="form-group">
+        <label class="form-check-label" for="save">
+          <input type="checkbox" class="form-check-input" [(ngModel)]="save" name="save">
+          Login Speichern</label>
+        </div>
   </form>
 
   <button [disabled]="!form.form.valid" type="submit" class="btn btn-success" (click)="onSubmit()">Login</button>

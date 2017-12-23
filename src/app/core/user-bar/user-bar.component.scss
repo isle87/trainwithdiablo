@@ -1,0 +1,23 @@
+@import "../../../styles.scss";
+
+#bar-back {
+  background-color: darken($color1, 10%);
+}
+
+#bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: $max-width;
+  margin: 0 auto;
+  @media screen and (max-width: 850px) {
+    margin: 0 23px;
+  }
+}
+
+#logout {
+  cursor: pointer;
+  &:hover {
+    color: $color3;
+  }
+}

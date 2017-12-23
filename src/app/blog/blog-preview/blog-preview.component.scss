@@ -7,6 +7,7 @@ h2 {
 
 
 .img{
+  border-radius: 5px 0 0 5px;
   height: $blog-img-size;
   width: $blog-img-size;
   // background-image: url('https://www.golem.de/1712/sp_131733-150578-i_rc.jpg');
@@ -60,6 +61,8 @@ h2 {
 }
 
 .container {
+  border-radius: 5px;
+  position: relative;
   cursor: pointer;
   margin: 10px;
   background-color: $color4;
@@ -77,4 +80,17 @@ $break: 850px;
   .container {
     width: 90vw;
   }
+}
+
+#work-box {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#delete, #edit {
+  margin: 5px 10px;
+  color: $color3;
 }

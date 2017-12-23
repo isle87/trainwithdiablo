@@ -2,19 +2,24 @@
 <twd-modal-item #set></twd-modal-item>
 <div class="container">
 
+    <div id="work-box">
+        <div *ngIf="logDelete.permission" id="edit" [routerLink]="['/news/edit', id]"><i class="fas fa-edit"></i></div>
+        <div *ngIf="logEdit.permission" id="delete" (click)="delete()"><i class="fas fa-trash"></i></div>
+      </div>
+
     <div class="img" #img></div>
     <div class="author">
-        <p>{{(post$ | async)?.Author}} am {{(post$ | async)?.PubDate | date:'mediumDate'}}</p>
+        <p>{{post?.Author}} am {{post?.PubDate | date:'mediumDate'}}</p>
 
         <p id="topic">3 <i class="fas fa-comment"></i></p>
     </div>
 
-    <h1>{{(post$ | async)?.Title}}</h1>
+    <h1>{{post.Title}}</h1>
     <div class="topic" >
-      <p >{{(post$ | async)?.Topic}}</p>
+      <p >{{post?.Topic}}</p>
     </div>
 
-    <div #content id="content" [innerHTML]="(post$ | async)?.Text | sanitizeHtml">
+    <div #content id="content" [innerHTML]="post?.Text | sanitizeHtml">
     </div>
 
     <div class="social">

@@ -1,3 +1,4 @@
 <div>
-  <twd-blog-preview *ngFor="let p of blogList" [post]="p" [routerLink]="['/news',p.id]"></twd-blog-preview>
+  <button *ngIf="logWrite.permission" class="btn btn-danger" routerLink="/news/new"> <i class="fas fa-plus"></i> Neuer Beitrag</button>
+  <twd-blog-preview *ngFor="let p of blogList" [post]="p" (change)="init()"></twd-blog-preview>
 </div>

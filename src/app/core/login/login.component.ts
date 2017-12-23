@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   username;
   password;
+  save = false;
   wrongLogin = false;
   constructor(private auth: AuthService, private router: Router) { }
 
@@ -18,11 +19,9 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     console.log('hello');
-    this.auth.login(this.username, this.password)
+    this.auth.login(this.username, this.password, this.save)
       .subscribe(res => {
-        if (res) {
-          this.router.navigate(['/news', {outlet: {userbar: 'user'}}]);
-        } else {
+        if (!res) {
           this.wrongLogin = true;
         }
       });

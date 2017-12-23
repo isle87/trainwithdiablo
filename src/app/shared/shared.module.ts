@@ -5,21 +5,28 @@ import { SanitizeHtmlPipe } from './sanitize-html.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalItemComponent } from './modal-item/modal-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
 import { WriteCommentComponent } from './write-comment/write-comment.component';
 import { CommentsComponent } from './comments/comments.component';
+import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { TextEditorComponent } from './text-editor/text-editor.component';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    QuillModule,
   ],
   declarations: [
     SanitizeHtmlPipe,
     ModalItemComponent,
     WriteCommentComponent,
     CommentsComponent,
+    DeleteDialogComponent,
+    TextEditorComponent,
   ],
   exports: [
     SanitizeHtmlPipe,
@@ -28,6 +35,10 @@ import { CommentsComponent } from './comments/comments.component';
     HttpClientModule,
     WriteCommentComponent,
     CommentsComponent,
+    MatDialogModule,
+    DeleteDialogComponent,
+    TextEditorComponent,
+    QuillModule
   ],
   providers: [
   ]
