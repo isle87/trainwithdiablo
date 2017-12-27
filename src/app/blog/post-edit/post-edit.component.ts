@@ -34,14 +34,14 @@ export class PostEditComponent implements OnInit {
         if (this.id === 0) { // It's a new post. We need a post object
         return Observable.create((ob: Observer<BlogPost>) => {
           const ho: BlogPost = {
-            Author: this.auth.getUsername(),
+            author: this.auth.getUsername(),
             id: 0,
-            PreviewImage: '',
-            PreviewText: '',
-            PubDate: '',
-            Text: '',
-            Title: '',
-            Topic: ''
+            previewImage: '',
+            previewText: '',
+            pubDate: '',
+            text: '',
+            title: '',
+            topic: ''
           };
           ob.next(ho);
           ob.complete();

@@ -109,8 +109,8 @@ export class PostComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   private setupImage() {
-    this.img.nativeElement.style.backgroundImage = `url(${this.post.PreviewImage})`;
-    this.tweet += this.post.PreviewText.replace(/ /g, '%20');
+    this.img.nativeElement.style.backgroundImage = `url(${this.post.previewImage})`;
+    this.tweet += this.post.previewText.replace(/ /g, '%20');
   }
 
   private setUpHoverItemModal() {

@@ -15,7 +15,7 @@ export class BlogService {
 
   public getBlogPosts(): Observable<BlogPost[]> {
     const sorted = POSTS.sort((a, b) =>
-    Date.parse(b.PubDate) - Date.parse(a.PubDate)
+    Date.parse(b.pubDate) - Date.parse(a.pubDate)
   );
     return Observable.create((ob: Observer<BlogPost[]>) => {
       ob.next(sorted);
@@ -43,7 +43,7 @@ export class BlogService {
 
   public getComments(postId: number): Observable<Comment[]> {
     const filtered = COMMENTS.filter(ele => ele.postId && ele.postId === postId )
-      .sort((a, b) => Date.parse(b.PubDate) - Date.parse(a.PubDate));
+      .sort((a, b) => Date.parse(b.pubDate) - Date.parse(a.pubDate));
     return Observable.create((ob: Observer<Comment[]> ) => {
       ob.next(Object.assign({}, filtered));
       ob.complete();
@@ -71,7 +71,7 @@ export class BlogService {
     return Observable.create((ob: Observer<boolean>) => {
       // just testing. this stuff should be done in the backend
       post.id = POSTS.length;
-      post.PubDate = new Date(Date.now()).toISOString();
+      post.pubDate = new Date(Date.now()).toISOString();
       POSTS.push(Object.assign({}, post));
       ob.next(true);
     });

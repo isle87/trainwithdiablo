@@ -14,10 +14,10 @@ export class WriteCommentComponent {
 
 
   onSubmit() {
-    this.comment.UserId = 1;
-    this.comment.UserName = 'Gast';
+    this.comment.userId = 1;
+    this.comment.username = 'Gast';
     this.comment.postId = this.postId;
-    this.comment.PubDate = new Date(Date.now()).toISOString();
+    this.comment.pubDate = new Date(Date.now()).toISOString();
     console.log(this.comment);
     this.onComment.emit(this.comment);
     this.comment = new Comment('');

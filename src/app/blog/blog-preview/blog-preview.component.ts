@@ -36,7 +36,7 @@ export class BlogPreviewComponent implements OnInit {
   constructor(private blogService: BlogService, private dialog: MatDialog, private auth: AuthService) { }
 
   ngOnInit() {
-    this.img.nativeElement.style.backgroundImage = `url(${this.post.PreviewImage})`;
+    this.img.nativeElement.style.backgroundImage = `url(${this.post.previewImage})`;
     this.auth.changeLogged$.subscribe(res => {
       this.auth.hasPermission(this.logDelete);
       this.auth.hasPermission(this.logEdit);

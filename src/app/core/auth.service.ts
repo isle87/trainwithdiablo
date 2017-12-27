@@ -57,10 +57,10 @@ export class AuthService {
     if (username === 'tobi' && password === 'passwort') {
 
       this.User = {
-        Id: 2,
-        Name: 'tobi',
-        Password: 'passwort',
-        Status: EnumStatus.admin
+        id: 2,
+        name: 'tobi',
+        password: 'passwort',
+        status: EnumStatus.admin
       };
       this.onLogin();
       if (saveData) this.saveData();
@@ -95,7 +95,7 @@ export class AuthService {
     if (!PermissionLevels.has(perm.key))
       throw new Error(`The PermissionValue ${perm.key} key doesn't exist on PermissionLevels.
         Maybe you should add it to it.`);
-     perm.permission = this.User.Status <= this.User.Status;
+     perm.permission = this.User.status <= this.User.status;
   }
 
   public logOut() {
@@ -111,12 +111,12 @@ export class AuthService {
     if (!this.isLogedin)
       return;
 
-    return this.User.Name;
+    return this.User.name;
   }
 
   private saveData() {
-    localStorage.setItem('Username', this.User.Name);
-    localStorage.setItem('Password', this.User.Password);
+    localStorage.setItem('Username', this.User.name);
+    localStorage.setItem('Password', this.User.password);
   }
 
   private checkSavedData() {

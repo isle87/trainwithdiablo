@@ -3,14 +3,14 @@ import { BlogPost } from '../models/blog-post';
 export const POSTS: BlogPost[] = [
   {
     id: 1,
-    Author: 'Tobias Baumgarten',
-    Title: 'Weihnachtsfest Lootfest?',
-    Topic: 'Weihnachten',
-    PreviewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
+    author: 'Tobias Baumgarten',
+    title: 'Weihnachtsfest Lootfest?',
+    topic: 'Weihnachten',
+    previewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
     Nam consectetur luctus tincidunt. Nulla euismod sem vitae augue interdum semper. Nam tempus ac ante in hendrerit.`,
-    PubDate: '2017-12-18 23:00:01',
-    PreviewImage: 'https://diablo3.ingame.de/files/2014/09/Loot-Gier-517x338.jpg',
-    Text: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.</p>
+    pubDate: '2017-12-18 23:00:01',
+    previewImage: 'https://diablo3.ingame.de/files/2014/09/Loot-Gier-517x338.jpg',
+    text: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.</p>
   <a class="link" href="/post/2">Aliquam</a> erat volutpat. Curabitur aliquet neque vel nisl
   fermentum, eget
 
@@ -53,14 +53,14 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: 2,
-    Author: 'Freddy',
-    Title: 'Du ahnst es nicht!',
-    Topic: 'Greater Rift',
-    PreviewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
+    author: 'Freddy',
+    title: 'Du ahnst es nicht!',
+    topic: 'Greater Rift',
+    previewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
     Nam consectetur luctus tincidunt. Nulla euismod sem vitae augue interdum semper. Nam tempus ac ante in hendrerit.`,
-    PubDate: '2017-12-18 23:00:01',
-    PreviewImage: 'http://diablo3.4fansites.de/bilder/news/4ff-folge52-yt-small.jpg',
-    Text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
+    pubDate: '2017-12-18 23:00:01',
+    previewImage: 'http://diablo3.4fansites.de/bilder/news/4ff-folge52-yt-small.jpg',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
   Aliquam erat volutpat. Curabitur aliquet neque vel nisl fermentum, eget laoreet ex imperdiet.
   Donec at pellentesque odio, in congue sem. Vivamus id turpis metus. Pellentesque vel turpis eu
   diam sagittis sollicitudin sit amet vitae arcu. Duis pulvinar dui et justo convallis consequat.
@@ -82,14 +82,14 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: 3,
-    Author: 'jessi',
+    author: 'jessi',
     // tslint:disable-next-line:quotemark
-    Title: "Legendaries Legendaries",
-    Topic: 'Farmen',
-    PreviewText: `Heute identifizieren wir über 200 Legendäre Items für euch und da sollte ja eigentlich was dabei sein.`,
-    PubDate: '2017-12-08 09:43:01',
-    PreviewImage: 'http://diablo3.4fansites.de/bilder/news/droprates-patch261.jpg',
-    Text: `
+    title: "Legendaries Legendaries",
+    topic: 'Farmen',
+    previewText: `Heute identifizieren wir über 200 Legendäre Items für euch und da sollte ja eigentlich was dabei sein.`,
+    pubDate: '2017-12-08 09:43:01',
+    previewImage: 'http://diablo3.4fansites.de/bilder/news/droprates-patch261.jpg',
+    text: `
     Heute sprechen wir einmal kurz über die <span class="highlight">Dropraten</span> aus Diablo 3 und <span class="highlight">identifizieren</span> über
     <span class="highlight">200 Items</span>.
     Generell gilt in Diablo ihr könnt alle Items überall finden bis auf die speziellen Kopfgeld-Legendarys,
@@ -110,14 +110,14 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: 5,
-    Author: 'Freddy',
-    Title: 'Du ahnst es nicht!',
-    Topic: 'Greater Rift',
-    PreviewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
+    author: 'Freddy',
+    title: 'Du ahnst es nicht!',
+    topic: 'Greater Rift',
+    previewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
     Nam consectetur luctus tincidunt. Nulla euismod sem vitae augue interdum semper. Nam tempus ac ante in hendrerit.`,
-    PubDate: '2017-12-18 23:00:01',
-    PreviewImage: 'http://diablo3.4fansites.de/bilder/news/4ff-folge52-yt-small.jpg',
-    Text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
+    pubDate: '2017-12-18 23:00:01',
+    previewImage: 'http://diablo3.4fansites.de/bilder/news/4ff-folge52-yt-small.jpg',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
   Aliquam erat volutpat. Curabitur aliquet neque vel nisl fermentum, eget laoreet ex imperdiet.
   Donec at pellentesque odio, in congue sem. Vivamus id turpis metus. Pellentesque vel turpis eu
   diam sagittis sollicitudin sit amet vitae arcu. Duis pulvinar dui et justo convallis consequat.
@@ -139,15 +139,15 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: 6,
-    Author: 'Mattias',
+    author: 'Mattias',
     // tslint:disable-next-line:quotemark
-    Title: "Catch'em all",
-    Topic: 'Set-Portal',
-    PreviewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
+    title: "Catch'em all",
+    topic: 'Set-Portal',
+    previewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
     Nam consectetur luctus tincidunt. Nulla euismod sem vitae augue interdum semper. Nam tempus ac ante in hendrerit.`,
-    PubDate: '2017-12-18 23:00:01',
-    PreviewImage: 'https://www.golem.de/1712/sp_131732-150575-i_rc.jpg',
-    Text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
+    pubDate: '2017-12-18 23:00:01',
+    previewImage: 'https://www.golem.de/1712/sp_131732-150575-i_rc.jpg',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
   Aliquam erat volutpat. Curabitur aliquet neque vel nisl fermentum, eget laoreet ex imperdiet.
   Donec at pellentesque odio, in congue sem. Vivamus id turpis metus. Pellentesque vel turpis eu
   diam sagittis sollicitudin sit amet vitae arcu. Duis pulvinar dui et justo convallis consequat.
@@ -169,14 +169,14 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: 7,
-    Author: 'Tobias Baumgarten',
-    Title: 'Weihnachtsfest Lootfest?',
-    Topic: 'Weihnachten',
-    PreviewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
+    author: 'Tobias Baumgarten',
+    title: 'Weihnachtsfest Lootfest?',
+    topic: 'Weihnachten',
+    previewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
     Nam consectetur luctus tincidunt. Nulla euismod sem vitae augue interdum semper. Nam tempus ac ante in hendrerit.`,
-    PubDate: '2017-12-18 23:00:01',
-    PreviewImage: 'https://diablo3.ingame.de/files/2014/09/Loot-Gier-517x338.jpg',
-    Text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
+    pubDate: '2017-12-18 23:00:01',
+    previewImage: 'https://diablo3.ingame.de/files/2014/09/Loot-Gier-517x338.jpg',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
   Aliquam erat volutpat. Curabitur aliquet neque vel nisl fermentum, eget laoreet ex imperdiet.
   Donec at pellentesque odio, in congue sem. Vivamus id turpis metus. Pellentesque vel turpis eu
   diam sagittis sollicitudin sit amet vitae arcu. Duis pulvinar dui et justo convallis consequat.
@@ -198,14 +198,14 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: 8,
-    Author: 'Freddy',
-    Title: 'Du ahnst es nicht!',
-    Topic: 'Greater Rift',
-    PreviewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
+    author: 'Freddy',
+    title: 'Du ahnst es nicht!',
+    topic: 'Greater Rift',
+    previewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
     Nam consectetur luctus tincidunt. Nulla euismod sem vitae augue interdum semper. Nam tempus ac ante in hendrerit.`,
-    PubDate: '2017-12-18 23:00:01',
-    PreviewImage: 'http://diablo3.4fansites.de/bilder/news/4ff-folge52-yt-small.jpg',
-    Text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
+    pubDate: '2017-12-18 23:00:01',
+    previewImage: 'http://diablo3.4fansites.de/bilder/news/4ff-folge52-yt-small.jpg',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
   Aliquam erat volutpat. Curabitur aliquet neque vel nisl fermentum, eget laoreet ex imperdiet.
   Donec at pellentesque odio, in congue sem. Vivamus id turpis metus. Pellentesque vel turpis eu
   diam sagittis sollicitudin sit amet vitae arcu. Duis pulvinar dui et justo convallis consequat.
@@ -227,15 +227,15 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: 9,
-    Author: 'Mattias',
+    author: 'Mattias',
     // tslint:disable-next-line:quotemark
-    Title: "Catch'em all",
-    Topic: 'Set-Portal',
-    PreviewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
+    title: "Catch'em all",
+    topic: 'Set-Portal',
+    previewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
     Nam consectetur luctus tincidunt. Nulla euismod sem vitae augue interdum semper. Nam tempus ac ante in hendrerit.`,
-    PubDate: '2017-12-18 23:00:01',
-    PreviewImage: 'https://www.golem.de/1712/sp_131732-150575-i_rc.jpg',
-    Text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
+    pubDate: '2017-12-18 23:00:01',
+    previewImage: 'https://www.golem.de/1712/sp_131732-150575-i_rc.jpg',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
   Aliquam erat volutpat. Curabitur aliquet neque vel nisl fermentum, eget laoreet ex imperdiet.
   Donec at pellentesque odio, in congue sem. Vivamus id turpis metus. Pellentesque vel turpis eu
   diam sagittis sollicitudin sit amet vitae arcu. Duis pulvinar dui et justo convallis consequat.
@@ -257,14 +257,14 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: 10,
-    Author: 'Tobias Baumgarten',
-    Title: 'Weihnachtsfest Lootfest?',
-    Topic: 'Weihnachten',
-    PreviewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
+    author: 'Tobias Baumgarten',
+    title: 'Weihnachtsfest Lootfest?',
+    topic: 'Weihnachten',
+    previewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
     Nam consectetur luctus tincidunt. Nulla euismod sem vitae augue interdum semper. Nam tempus ac ante in hendrerit.`,
-    PubDate: '2017-12-18 23:00:01',
-    PreviewImage: 'https://diablo3.ingame.de/files/2014/09/Loot-Gier-517x338.jpg',
-    Text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
+    pubDate: '2017-12-18 23:00:01',
+    previewImage: 'https://diablo3.ingame.de/files/2014/09/Loot-Gier-517x338.jpg',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
   Aliquam erat volutpat. Curabitur aliquet neque vel nisl fermentum, eget laoreet ex imperdiet.
   Donec at pellentesque odio, in congue sem. Vivamus id turpis metus. Pellentesque vel turpis eu
   diam sagittis sollicitudin sit amet vitae arcu. Duis pulvinar dui et justo convallis consequat.
@@ -286,14 +286,14 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: 11,
-    Author: 'Freddy',
-    Title: 'Du ahnst es nicht!',
-    Topic: 'Greater Rift',
-    PreviewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
+    author: 'Freddy',
+    title: 'Du ahnst es nicht!',
+    topic: 'Greater Rift',
+    previewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
     Nam consectetur luctus tincidunt. Nulla euismod sem vitae augue interdum semper. Nam tempus ac ante in hendrerit.`,
-    PubDate: '2017-12-18 23:00:01',
-    PreviewImage: 'http://diablo3.4fansites.de/bilder/news/4ff-folge52-yt-small.jpg',
-    Text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
+    pubDate: '2017-12-18 23:00:01',
+    previewImage: 'http://diablo3.4fansites.de/bilder/news/4ff-folge52-yt-small.jpg',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
   Aliquam erat volutpat. Curabitur aliquet neque vel nisl fermentum, eget laoreet ex imperdiet.
   Donec at pellentesque odio, in congue sem. Vivamus id turpis metus. Pellentesque vel turpis eu
   diam sagittis sollicitudin sit amet vitae arcu. Duis pulvinar dui et justo convallis consequat.
@@ -315,15 +315,15 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: 12,
-    Author: 'Mattias',
+    author: 'Mattias',
     // tslint:disable-next-line:quotemark
-    Title: "Catch'em all",
-    Topic: 'Set-Portal',
-    PreviewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
+    title: "Catch'em all",
+    topic: 'Set-Portal',
+    previewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
     Nam consectetur luctus tincidunt. Nulla euismod sem vitae augue interdum semper. Nam tempus ac ante in hendrerit.`,
-    PubDate: '2017-12-18 23:00:01',
-    PreviewImage: 'https://www.golem.de/1712/sp_131732-150575-i_rc.jpg',
-    Text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
+    pubDate: '2017-12-18 23:00:01',
+    previewImage: 'https://www.golem.de/1712/sp_131732-150575-i_rc.jpg',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
   Aliquam erat volutpat. Curabitur aliquet neque vel nisl fermentum, eget laoreet ex imperdiet.
   Donec at pellentesque odio, in congue sem. Vivamus id turpis metus. Pellentesque vel turpis eu
   diam sagittis sollicitudin sit amet vitae arcu. Duis pulvinar dui et justo convallis consequat.
@@ -345,14 +345,14 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: 13,
-    Author: 'Tobias Baumgarten',
-    Title: 'Weihnachtsfest Lootfest?',
-    Topic: 'Weihnachten',
-    PreviewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
+    author: 'Tobias Baumgarten',
+    title: 'Weihnachtsfest Lootfest?',
+    topic: 'Weihnachten',
+    previewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
     Nam consectetur luctus tincidunt. Nulla euismod sem vitae augue interdum semper. Nam tempus ac ante in hendrerit.`,
-    PubDate: '2017-12-18 23:00:01',
-    PreviewImage: 'https://diablo3.ingame.de/files/2014/09/Loot-Gier-517x338.jpg',
-    Text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
+    pubDate: '2017-12-18 23:00:01',
+    previewImage: 'https://diablo3.ingame.de/files/2014/09/Loot-Gier-517x338.jpg',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
   Aliquam erat volutpat. Curabitur aliquet neque vel nisl fermentum, eget laoreet ex imperdiet.
   Donec at pellentesque odio, in congue sem. Vivamus id turpis metus. Pellentesque vel turpis eu
   diam sagittis sollicitudin sit amet vitae arcu. Duis pulvinar dui et justo convallis consequat.
@@ -374,14 +374,14 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: 14,
-    Author: 'Freddy',
-    Title: 'Du ahnst es nicht!',
-    Topic: 'Greater Rift',
-    PreviewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
+    author: 'Freddy',
+    title: 'Du ahnst es nicht!',
+    topic: 'Greater Rift',
+    previewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
     Nam consectetur luctus tincidunt. Nulla euismod sem vitae augue interdum semper. Nam tempus ac ante in hendrerit.`,
-    PubDate: '2017-12-18 23:00:01',
-    PreviewImage: 'http://diablo3.4fansites.de/bilder/news/4ff-folge52-yt-small.jpg',
-    Text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
+    pubDate: '2017-12-18 23:00:01',
+    previewImage: 'http://diablo3.4fansites.de/bilder/news/4ff-folge52-yt-small.jpg',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
   Aliquam erat volutpat. Curabitur aliquet neque vel nisl fermentum, eget laoreet ex imperdiet.
   Donec at pellentesque odio, in congue sem. Vivamus id turpis metus. Pellentesque vel turpis eu
   diam sagittis sollicitudin sit amet vitae arcu. Duis pulvinar dui et justo convallis consequat.
@@ -403,15 +403,15 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: 15,
-    Author: 'Mattias',
+    author: 'Mattias',
     // tslint:disable-next-line:quotemark
-    Title: "Catch'em all",
-    Topic: 'Set-Portal',
-    PreviewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
+    title: "Catch'em all",
+    topic: 'Set-Portal',
+    previewText: `ed sodales ullamcorper velit et aliquam. Aliquam ultricies sem tortor, quis eleifend mauris fermentum quis.
     Nam consectetur luctus tincidunt. Nulla euismod sem vitae augue interdum semper. Nam tempus ac ante in hendrerit.`,
-    PubDate: '2017-12-18 23:00:01',
-    PreviewImage: 'https://www.golem.de/1712/sp_131732-150575-i_rc.jpg',
-    Text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
+    pubDate: '2017-12-18 23:00:01',
+    previewImage: 'https://www.golem.de/1712/sp_131732-150575-i_rc.jpg',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo sodales bibendum.
   Aliquam erat volutpat. Curabitur aliquet neque vel nisl fermentum, eget laoreet ex imperdiet.
   Donec at pellentesque odio, in congue sem. Vivamus id turpis metus. Pellentesque vel turpis eu
   diam sagittis sollicitudin sit amet vitae arcu. Duis pulvinar dui et justo convallis consequat.

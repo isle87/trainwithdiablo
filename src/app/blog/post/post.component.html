@@ -9,17 +9,17 @@
 
     <div class="img" #img></div>
     <div class="author">
-        <p>{{post?.Author}} am {{post?.PubDate | date:'mediumDate'}}</p>
+        <p>{{post?.author}} am {{post?.pubDate | date:'mediumDate'}}</p>
 
         <p id="topic">3 <i class="fas fa-comment"></i></p>
     </div>
 
-    <h1>{{post.Title}}</h1>
+    <h1>{{post.title}}</h1>
     <div class="topic" >
-      <p >{{post?.Topic}}</p>
+      <p >{{post?.topic}}</p>
     </div>
 
-    <div #content id="content" [innerHTML]="post?.Text | sanitizeHtml">
+    <div #content id="content" [innerHTML]="post?.text | sanitizeHtml">
     </div>
 
     <div class="social">
